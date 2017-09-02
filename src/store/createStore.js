@@ -34,7 +34,6 @@ const createStore = (initialState = {}) => {
     )
   )
   store.asyncReducers = {}
-
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
