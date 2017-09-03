@@ -15,7 +15,7 @@ class HomeView extends React.Component {
   }
 
   getFilms (films) {
-    let Movies = {}
+    let Movies = []
     films.map((film) => {
       fetch(film)
       .then((res) => res.json()
@@ -24,6 +24,7 @@ class HomeView extends React.Component {
       })
       )
     })
+    console.log(Movies)
     return Movies
   }
 
@@ -33,8 +34,10 @@ class HomeView extends React.Component {
     .then((response) => response.json()
     .then((responseJson) => {
       console.log(responseJson)
-      let Movies = this.getFilms(responseJson.films)
-      console.log(responseJson.films)
+      let MoviesArr = this.getFilms(responseJson.films)
+      let __movies = []
+      for (var k in MoviesArr) __movies.push(MoviesArr[k])
+      console.log(__movies)
       let newState = responseJson
       this.setState({
         profiles : responseJson,

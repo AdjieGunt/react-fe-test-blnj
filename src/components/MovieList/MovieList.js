@@ -25,7 +25,7 @@ class Movies extends React.Component {
   render () {
     console.log(this.props.moviesArr)
     let Movie = this.props.moviesArr
-    let movielist = Movie.map((m, i) => <MovieListItem m={m} key={i} bg={ i%2==0 ? 'is-purple' : 'is-orange' } />)
+    let movielist = Movie.map((m, i) => <MovieListItem m={m.i} key={i} bg={ i%2==0 ? 'is-purple' : 'is-orange' } />)
     console.log(Movie)
     return (
       <div className='columns is-mobile'> { movielist } </div>
