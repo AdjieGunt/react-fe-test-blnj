@@ -4,22 +4,20 @@ import './Profile.scss'
 import ProfileDefault from './assets/profile-default.png'
 
 class Profile extends React.Component {
-  // static propTypes = {
-  //   store: PropTypes.object.isRequired,
-  //   routes: PropTypes.object.isRequired,
-  // }
+
 
   shouldComponentUpdate () {
-    return false
+    return true
   }
 
   render () {
+    console.log(this.state)
     return (
       <div className='profile'>
         <div className='profile-name'>
-          <h1 className='title'> Luke Skywalker </h1>
+          <h1 className='title'> {this.props.profiles.name} </h1>
         </div>
-        <ProfileDetail />
+        <ProfileDetail profiles={this.props.profiles} />
       </div>
     )
   }
@@ -32,27 +30,27 @@ class ProfileDetail extends React.Component {
         <tbody>
           <tr>
             <td> Height: </td>
-            <td> 175 CM</td>
+            <td> {this.props.profiles.height } cm</td>
           </tr>
           <tr>
             <td> Mass: </td>
-            <td> Bond</td>
+            <td> {this.props.profiles.mass } kg</td>
           </tr>
           <tr>
             <td> Hair Color: </td>
-            <td> Fair</td>
+            <td> {this.props.profiles.hair_color } </td>
           </tr>
           <tr>
             <td> Skin Color: </td>
-            <td> Blue</td>
+            <td> {this.props.profiles.skin_color } </td>
           </tr>
           <tr>
             <td> Birth Year: </td>
-            <td> 19 June 2010</td>
+            <td> {this.props.profiles.birth_year }</td>
           </tr>
           <tr>
             <td> Gender: </td>
-            <td> Male</td>
+            <td> {this.props.profiles.gender }</td>
           </tr>
         </tbody>
       </table>
