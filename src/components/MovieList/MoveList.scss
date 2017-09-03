@@ -12,21 +12,9 @@
     padding: 1rem;
   }
 
-  .card-header {
-    .thumb {
-      width: 50%;
-      padding:1rem;
-      margin: auto auto;
-    }
-  }
+  
+  
 
-  .is-purple {
-    background: #4B0082;
-  }
-
-  .is-orange {
-    background: #FF4500;
-  }
 
   .is-red {
     color:red!important;
@@ -35,4 +23,24 @@
 
 h1 {
   font-size: 1.5rem;
+}
+
+
+  .is-purple {
+    background: #4B0082;
+  }
+
+.is-orange {
+    background: #FF4500;
+}
+
+.card-header {
+  .thumb {
+    width: 50%;
+    padding:1rem;
+    margin: auto auto;
+    }
+    img {
+      width: 100%;
+    } 
 }

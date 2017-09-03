@@ -8,7 +8,7 @@ class MovieList extends React.Component {
 
   renderMovieItem = (movies, index) => {
     console.log(movies)
-    const style = index % 2 == 0 ? 'is-purple' : 'is-orange'
+    const style = index % 2 === 0 ? 'is-purple' : 'is-orange'
     return (
         <div className='column is-3' key={`movie-${index}`}>
           <div className='card movie-item'>
