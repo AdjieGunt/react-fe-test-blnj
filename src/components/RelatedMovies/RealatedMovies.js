@@ -9,7 +9,7 @@ class RelatedMovies extends React.Component {
     const { movies } = this.props
     console.log(movies)
     return (
-      <div className='column  related-movies'>
+      <div className='related-movies'>
         <div className='columns is-mobile'>
           <h1 className='is-red'>Related Another Movie's</h1>
         </div>

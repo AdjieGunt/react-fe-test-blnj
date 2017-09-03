@@ -42,7 +42,7 @@ class MovieList extends React.Component {
               <h1 className="is-red"><b>{name} Movie's</b></h1>
             </div>
             <div className="column is-2">
-              <a href="#" className="link-more">See more</a>
+              <a href="#" className="link-more level-right">See more</a>
             </div>
           </div>
           <div className="columns">
