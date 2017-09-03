@@ -11,7 +11,7 @@ class Profile extends React.Component {
   }
 
   render () {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className='profile'>
         <div className='profile-name'>

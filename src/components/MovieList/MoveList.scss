@@ -1,9 +1,11 @@
 .movie-list {
   // margin-top:2rem;
   margin-bottom:2rem;
-
+  h1 {
+    font-size: 5rem;
+  }
   .movie-item{
-    margin-right: 1.5rem;    
+    // margin-right: 1.5rem;    
     margin-top:1rem;
   }
   .card-content {
@@ -25,4 +27,12 @@
   .is-orange {
     background: #FF4500;
   }
+
+  .is-red {
+    color:red!important;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
 }

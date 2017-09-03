@@ -1,49 +1,55 @@
 import React from 'react'
 import './RelatedMovies.scss'
+import PropTypes from 'prop-types'
 
 class RelatedMovies extends React.Component {
+
+
   render () {
+    const { movies } = this.props
+    console.log(movies)
     return (
-      <div className='related-movies'>
+      <div className='column  related-movies'>
         <div className='columns is-mobile'>
-            <div className='column'>
-              <h1 className='subtitle is-red'>Related Another Movie's</h1>
-            </div>
+          <h1 className='is-red'>Related Another Movie's</h1>
         </div>
         <div className='card'>
           <div className='card-header'>
             <table>
               <tbody>
                 <tr>
-                  <td colSpan='2'><b> The Force Awaknes </b> </td>
+                  <td colSpan='2'><b> { movies.title } </b> </td>
                 </tr>
                 <tr>
                   <td>Director:</td>
-                  <td> Irwansyah </td>
+                  <td> { movies.director } </td>
                 </tr>
                 <tr>
                   <td>Producer:</td>
-                  <td> Irwansyah, Billi Jhon, Sascia Adya </td>
+                  <td> { movies.producer } </td>
                 </tr>
                 <tr>
                   <td>Realese Date:</td>
-                  <td> 2015-10-19 </td>
+                  <td> { movies.release_date } </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div className='card-content'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Pariatur, quibusdam non totam earum id veniam nemo quae!
-            Provident dignissimos, quos ex quod voluptates labore nostrum eum inventore,
-            a dolores blanditiis!
-            <br/>
-            <span className='link-more level-right'>See more</span>
+          <div className='card-content '>
+            <div className="ellipsis"> { movies.opening_crawl } </div>
+            <br />
+            <a href='#'>
+              <span className='link-more level-right'>See more</span>
+            </a>
           </div>
         </div>
       </div>
     )
   }
+}
+
+RelatedMovies.propTypes = {
+  movies : PropTypes.object
 }
 
 export default RelatedMovies
